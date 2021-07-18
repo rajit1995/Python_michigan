@@ -18,13 +18,11 @@ while True:
     data_read = data.decode()
     info = json.loads(data)
     list_data = info["comments"]
+    print('Count:', len(list_data))
     add = 0
-    count = 0
     for item in list_data:
-        count = count +1
         num = item["count"]
         add = add + int(num)
-    print("Count: ",count)
     print("Sum: ",add)
     
         
