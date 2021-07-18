@@ -17,12 +17,10 @@ while True:
     print('Retrieved', len(data), 'characters')
     data_read = data.decode()
     info = json.loads(data)
-    list_data = info["comments"]
-    print('Count:', len(list_data))
+    print('Count:', len(info["comments"]))
     add = 0
-    for item in list_data:
-        num = item["count"]
-        add = add + int(num)
+    for item in info["comments"]:
+        add = add + int(item["count"])
     print("Sum: ",add)
     
         
